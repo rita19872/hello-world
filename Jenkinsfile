@@ -1,7 +1,7 @@
 node {
    def mvnHome
    stage('checkout') {
-      git checkout
+      checkout scm
       mvnHome = tool name: 'M2', type: 'maven'
       env.JAVA_HOME = tool 'JDK1.8'
    }
